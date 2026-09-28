@@ -1,0 +1,31 @@
+{
+  "name": "memecoin-launch-sniper-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Solana memecoin intelligence + paper execution platform. LIVE locked by default.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "worker": "tsx src/index.ts --worker",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test tests/unit.mjs && vitest run",
+    "benchmark": "tsx src/scripts/benchmark.ts",
+    "backtest": "tsx src/scripts/backtest.ts"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ws": "^8.18.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.10",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}
